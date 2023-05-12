@@ -14,7 +14,7 @@
 
 1. 打开[Microsoft教育](https://www.microsoft.com/zh-cn/education/products/office)网页
 
-<div align="center"><img src="image/使用Onedrive同步任意文件夹的方法/1683881175559.png" width="300"></div>
+<div align="center"><img src="image/OnedriveSync/1683881175559.png" width="300"></div>
 
 2. 输入北京大学邮箱(xxx@pku.edu.cn、xxx@stu.pku.edu.cn等)，点击**立即开始**进行注册。
 3. 随指引输入正确的信息即可完成注册。
@@ -68,10 +68,10 @@ Onedrive默认只可同步 ``文档``、``图片``、``桌面``3个系统文件�
 
 下面给出了设置任务属性时的参考图片。
 
-<div align="center"><img src="image/使用Onedrive同步任意文件夹的方法/1683886653455.png" width="500"></div>
+<div align="center"><img src="image/OnedriveSync/1683886653455.png" width="500"></div>
 
-<div align="center"><img src="image/使用Onedrive同步任意文件夹的方法/1683886748627.png" width="500"></div>
+<div align="center"><img src="image/OnedriveSync/1683886748627.png" width="500"></div>
 
-<div align="center"><img src="image/使用Onedrive同步任意文件夹的方法/1683886769285.png" width="500"></div>
+<div align="center"><img src="image/OnedriveSync/1683886769285.png" width="500"></div>
 
-<div align="center"><img src="image/使用Onedrive同步任意文件夹的方法/1683886785943.png" width="500"></div>
+<div align="center"><img src="image/OnedriveSync/1683886785943.png" width="500"></div>
