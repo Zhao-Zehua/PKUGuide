@@ -50,7 +50,7 @@ Onedrive默认只可同步 ``文档``、``图片``、``桌面``3个系统文件�
 此过程可通过VBS脚本实现，步骤如下：
 
 1. 在Onedrive中创建一个文件夹，专门用于放置同步脚本和相应的文件，如路径为 `C:\Users\username\Onedrive - 北京大学\Sync`。
-2. 下载VBS脚本，用记事本打开，修改第6行 ``Const DIR_PATH="C:\Users\username\OneDrive - 北京大学\Sync\"``为1中文件夹的路径。注意，末尾的 ``\``是必要的。
+2. 下载[VBS脚本](https://github.com/ZhaoZh02/PKUGuide/blob/main/OnedriveSync/OnedriveSync.vbs)，用记事本打开，修改第6行 ``Const DIR_PATH="C:\Users\username\OneDrive - 北京大学\Sync\"``为1中文件夹的路径。注意，末尾的 ``\``是必要的。
 3. Windows徽标键->任务计划程序->创建基本任务。
    1. 名称和描述：自定。
    2. 触发器：计算机启动时。
