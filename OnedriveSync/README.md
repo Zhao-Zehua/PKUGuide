@@ -4,7 +4,7 @@
 
 首发日期：2023.05.12
 
-最后修改于：2023.05.18
+最后修改于：2023.05.19
 
 本教程仅适用于Windows系统
 
@@ -58,3 +58,9 @@ Onedrive默认只可同步 ``文档``、``图片``、``桌面``3个系统文件�
 4. 键入快捷键 ``Win + R``，输入 ``shell:startup``，回车打开。在弹出的文件夹中新建一个指向[可执行文件](https://github.com/ZhaoZh02/PKUGuide/blob/main/OnedriveSync/OnedriveSync.exe)的快捷方式，即可在开机时自动运行。
 
 提供了可执行文件的[源代码](https://github.com/ZhaoZh02/PKUGuide/blob/main/OnedriveSync/OnedriveSync.py)，可自行打包使用。
+
+## 5 跨平台编辑
+
+Onedrive在Windows、Mac、Android、iOS中均有良好的适配应用，包括Onedrive和Microsoft 365。
+
+例如：以Windows系统为主机，在主机中设置文件自动同步；使用iPad中的Microsoft 365进行云端文档编辑，即可实现同步更改。
