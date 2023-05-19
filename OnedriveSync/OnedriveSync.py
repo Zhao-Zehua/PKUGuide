@@ -1,14 +1,15 @@
 # Author: ZhaoZh02
-# Date: 2023.05.18
+# Date: 2023.05.19
 
 import os
+import re
 import sys
 import time
 import hashlib
 
 # 读取配置文件
 def variable_reader(config_path):
-    cache_path = r"\OnedriveSync"
+    cache_path = ""
     folder_paths = []
     with open(f"{config_path}/OnedriveSync.ini", "r", encoding = "UTF-8") as f:
         for line in f.readlines():
@@ -21,7 +22,7 @@ def variable_reader(config_path):
                 value = value.strip("\"")
                 value = value.strip("\'")
                 if key == "cache_path":
-                    cache_path = value + cache_path
+                    cache_path = value
                 elif key == "folder_path":
                     folder_paths.append(value)
     return cache_path, folder_paths
@@ -41,16 +42,25 @@ def hash_file(folder_paths):
 
 # 主函数
 def main():
+    timestamp = time.strftime("%Y%m%d%H%M%S", time.localtime())
     config_path = os.path.dirname(sys.argv[0])
     cache_path, folder_paths = variable_reader(config_path)
     hash_hex = hash_file(folder_paths)
-    try:
-        with open(cache_path, "r", encoding = "UTF-8") as f:
-            cache_hex = f.read()
-    except Exception as e:
-        cache_hex = ""
-    if hash_hex != cache_hex:
-        with open(cache_path, "w", encoding = "UTF-8") as f:
+    cache_hex = ""
+    # 打开格式为OnedriveSync和14位数字的文件
+    pattern = re.compile(r"^OnedriveSync\d{14}$")
+    for file in os.listdir(cache_path):
+        if pattern.match(file):
+            cache_file_path = os.path.join(cache_path, file)
+            with open(cache_file_path, "r", encoding = "UTF-8") as f:
+                cache_hex = f.read()
+            # 如果哈希值不匹配，则删除文件
+            if cache_hex != hash_hex:
+                os.remove(cache_file_path)
+    if cache_hex != hash_hex:
+        # 创建格式为OnedriveSync和14位数字的文件
+        cache_file_path = os.path.join(cache_path, f"OnedriveSync{timestamp}")
+        with open(cache_file_path, "w", encoding = "UTF-8") as f:
             f.write(hash_hex)
     return
 
