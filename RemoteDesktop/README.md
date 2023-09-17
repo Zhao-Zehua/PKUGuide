@@ -233,4 +233,4 @@ Zerotier有moon和planet的进阶用法，如有公网IP可以尝试。
 
 ## 7 致谢
 
-1. 感谢北京大学BBS网友[@ehzon](https://bbs.pku.edu.cn/v2/user.php?uid=306395)对[**2.2**和**2.3**的补充](https://bbs.pku.edu.cn/v2/post-read.php?bid=35&threadid=18641200)。
+1. 感谢北大未名BBS网友[@ehzon](https://bbs.pku.edu.cn/v2/user.php?uid=306395)对[**2.2**和**2.3**的补充](https://bbs.pku.edu.cn/v2/post-read.php?bid=35&threadid=18641200)。
