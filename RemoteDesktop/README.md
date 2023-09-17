@@ -4,7 +4,7 @@
 
 首发日期：2023.05.21
 
-最后修改于：2023.05.21
+最后修改于：2023.09.17
 
 本教程仅适用于Windows系统作为服务端(被访问的主机)的情况
 
@@ -18,7 +18,7 @@
 
 北京大学校园网是一个大型局域网，使用**网线、Wi-Fi(如连接PKU、PKU Secure)和VPN**均可接入。该校园网具有在同一物理位置固定分配同一IP的特性，在很长的一段时间内不会发生变化。基于固定的IP地址，在校园网内可以方便地实现远程桌面，并可以使用VPN在校外访问校园内的主机。
 
-2023.05.19起，[Todesk、向日葵在校园网内连接失效](https://bbs.pku.edu.cn/v2/post-read.php?bid=668&threadid=18555592)。
+~~2023.05.19起，[Todesk、向日葵在校园网内连接失效](https://bbs.pku.edu.cn/v2/post-read.php?bid=668&threadid=18555592)。~~
 
 ## 1 基础设置
 
@@ -130,7 +130,23 @@ Windows系统仅对专业版开放远程桌面访问，服务端(被访问的主
    5. 点击 ``完成``。
 6. 重启服务端。
 
-### 2.2 提升帧率上限
+### 2.2 关闭不使用的账户使用RDP登陆的权限
+
+1. 启动本地安全策略。
+
+2. 进入以下目录：本地策略 -> 用户权限分配 -> 允许通过远程桌面服务登录。
+
+3. 修改允许使用远程桌面的用户。
+
+### 2.3 启动过多尝试账户锁定
+
+1. 启动本地安全策略。
+
+2. 进入以下目录：账户策略 -> 账户锁定策略 -> 账户锁定阈值。
+
+3. 修改账户锁定阈值（也就是多少次失败尝试后锁定）和锁定时间。
+
+### 2.4 提升帧率上限
 
 远程桌面的默认帧率上限为30帧，可修改注册表以修改上限。
 
@@ -157,7 +173,7 @@ Windows系统仅对专业版开放远程桌面访问，服务端(被访问的主
 
 注意，实际连接时的帧率还取决于网络状况等其他因素。
 
-### 2.3 开启GPU加速
+### 2.5 开启GPU加速
 
 使用远程桌面连接时，默认无法调用GPU，可修改组策略以启用GPU。
 
@@ -166,7 +182,7 @@ Windows系统仅对专业版开放远程桌面访问，服务端(被访问的主
 3. 编辑 ``将硬件图形适配器应用于所有远程桌面服务会话``，选择 ``已启用``，点击 ``确定``保存设置。
 4. 重启服务端。
 
-### 2.4 开启路由器端口转发
+### 2.6 开启路由器端口转发
 
 如果你的服务端通过连接自建路由器上网，例如在宿舍的网线接口处连接了路由器，那么需要在路由器设置端口转发。
 
@@ -213,3 +229,8 @@ Zerotier有moon和planet的进阶用法，如有公网IP可以尝试。
 ## 6 参考资料
 
 1. [用于远程桌面服务的远程桌面客户端和远程电脑 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/remote/remote-desktop-services/welcome-to-rds)
+2. [Securing Remote Desktop (RDP) for System Administrators | Information Security Office](https://security.berkeley.edu/education-awareness/securing-remote-desktop-rdp-system-administrators)
+
+## 7 致谢
+
+1. 感谢北京大学BBS网友[@ehzon](https://bbs.pku.edu.cn/v2/user.php?uid=306395)对[**2.2**和**2.3**的补充](https://bbs.pku.edu.cn/v2/post-read.php?bid=35&threadid=18641200)。
