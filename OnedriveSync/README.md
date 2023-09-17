@@ -4,7 +4,7 @@
 
 首发日期：2023.05.12
 
-最后修改于：2023.05.19
+最后修改于：2023.09.17
 
 本教程仅适用于Windows系统
 
@@ -16,15 +16,21 @@
 2. ~~输入北京大学邮箱(xxx@pku.edu.cn、xxx@stu.pku.edu.cn等)，点击**立即开始**进行注册。~~
 3. ~~随指引输入正确的信息即可完成注册。~~
 
-据北京大学计算中心邮件：
+**据北京大学计算中心邮件：**
 
 > 2023年5月16日起，北大师生申请Office365新账号，须填写[此问卷星链接](https://www.wjx.cn/vm/Y5XwfHD.aspx#)，由系统管理员定期开通！“自助注册”功能将关闭。新北大Office365账号默认为北大校园卡号邮箱，具有A1权限；北大教师可申请A3权限，优先为北大Canvas教师分配，由教师教学发展中心管理。
 
 其中学院5位编号可参考[未名一点通](https://bbs.pku.edu.cn/123/)，不足位数用0补足。
 
+**据[Microsoft](https://info.microsoft.com/index.php/email/emailWebview?md_id=1711201)：**
+
+> Office 365 A1 Plus计划将于2024年8月1日停用。
+
+这意味着自2024年8月1日起，教育邮箱的网盘容量将受到限制，您可以选择使用其他订阅计划。
+
 ## 2 登录Onedrive
 
-打开Onedrive应用，登录账号。
+打开Onedrive桌面端应用，登录账号。
 
 使用Clash时可能会造成Onedrive登录失败。
 
@@ -63,4 +69,4 @@ Onedrive默认只可同步 ``文档``、``图片``、``桌面``3个系统文件�
 
 Onedrive在Windows、Mac、Android、iOS中均有良好的适配应用，包括Onedrive和Microsoft 365。
 
-例如：以Windows系统为主机，在主机中设置文件自动同步；使用iPad中的Microsoft 365进行云端文档编辑，即可实现同步更改。
+例如：以Windows系统为主机，在主机中设置文件自动同步；使用iPad中的Microsoft 365进行云端文档编辑，即可实现同步更改；在macOS中，将Onedrive文件夹加入Finder侧边栏，即可实现云端文件的本地管理，并可全平台同步。
